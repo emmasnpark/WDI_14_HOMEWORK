@@ -41,7 +41,7 @@ theirAge();
 var currentAge = 35;
 var maxAge = 90;
 var snackAmount = 3;
-var totalSnack = (maxAge - currentAge) * snackAmount;
+var totalSnack = (maxAge - currentAge) * snackAmount * 365;
 function theTotalSnack() {
   document.getElementById('snack').innerHTML = "I will need " + totalSnack + " to last you until the ripe old age of " + maxAge;
 }
