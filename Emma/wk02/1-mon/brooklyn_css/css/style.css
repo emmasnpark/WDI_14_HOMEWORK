@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  color: gray;
+}
+.container {
+  padding-left:50px;
+  padding-right: 50px;
+}
+header img{
+  width: 960px;
+}
+.gallery {
+  width: 960px;
+}
+.info {
+  width: 960px;
+}
+.gallery img {
+  display: inline-block;
+  float: left;
+  border: 4px solid gray;
+  margin: 2px;
+}
+footer {
+  clear: left;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
