@@ -12,12 +12,20 @@ body {
 header ul {
   margin: 0;
   padding: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
+/*li:first-child {
+  margin-left: 0;
+}*/
 header li {
   list-style: none;
-  display: inline-block;
-  padding: 12px 50px;
+  padding: 12px 0;
   background-color: black;
+  width: 16%;
+  /*margin: 5px;*/
 }
 header h1 {
   color: #e03a33;
@@ -106,6 +114,7 @@ footer li {
   border-right: 1px solid #e2dfde;
   padding-left: 4px;
   padding-right: 8px;
+  display: inline-block;
 }
 footer li:first-child {
   padding-left: 0;

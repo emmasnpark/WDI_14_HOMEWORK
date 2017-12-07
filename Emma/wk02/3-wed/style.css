@@ -1,0 +1,29 @@
+.head {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  border: 1px solid black;
+  margin: 0 60px;
+}
+.orangeBox, .yellowBox {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+.orangeBox {
+  background-color: orange;
+  text-align: center;
+}
+.yellowBox {
+  background-color: yellow;
+  text-align: center;
+}
+.buttons {
+  margin-top: 20px;
+}
