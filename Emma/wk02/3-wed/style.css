@@ -1,9 +1,19 @@
 .head {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+}
+.logo {
+  float: left;
+  height: 50px;
+  width: 10%;
+  background-color: red;
+  text-align: center;
+}
+.bank {
+  float: left;
+  width: 90%;
+  text-align: center;
 }
 .main {
+  clear: left;
   display: flex;
   justify-content: space-around;
   align-items: center;
