@@ -1,54 +1,57 @@
-var money = document.querySelector('.money');
-var span = document.querySelector('span');
+//for saving account
+var balance = document.querySelector('.balance');
+var savingInput = document.querySelector('.savingInput');
 var deposit = document.querySelector('.deposit');
 var withdraw = document.querySelector('.withdraw');
 
+//for checking account
 var checking = document.querySelector('.checking');
-var checkingSpan = document.querySelector('.checkingSpan');
+var checkingInput = document.querySelector('.checkingInput');
 var depositChecking = document.querySelector('.depositChecking');
 var withdrawChecking = document.querySelector('.withdrawChecking');
 
-
+//caculation for saving account
 function savingAccount() {
-  var withdraw = this.classList.contains('withdraw');
-  var moneyValue = Number(money.value);
-  var spanValue = Number(span.textContent)
-  var result;
+    var withdraw = this.classList.contains('withdraw');
+    var balanceValue = Number(balance.value);
+    var savingInputValue = Number(savingInput.textContent)
+    var result;
 
-  if(withdraw==true) {
-    if(spanValue >= moneyValue) {
-      result = spanValue - moneyValue;
-    }else {
-      alert("ARE YOU KIDDING? YOU HAVE NO MONEY!")
-      return
+    if(withdraw) {
+          if(savingInputValue >= balanceValue) {
+            result = savingInputValue - balanceValue;
+          }else {
+            alert("YOU HAVE NO MONEY!")
+            return
+          }
+    }else{
+      result = balanceValue + savingInputValue;
     }
-  }else{
-    result = moneyValue + spanValue;
-  }
-  span.textContent = result;
+    savingInput.textContent = result;
 }
 
 deposit.addEventListener('click', savingAccount);
 withdraw.addEventListener('click', savingAccount);
 
-
+//caculation for checking account
 function checkAccount() {
   var withdrawChecking = this.classList.contains('withdrawChecking');
   var checkingValue = Number(checking.value);
-  var spanCheckingValue = Number(checkingSpan.textContent)
+  var spanCheckingValue = Number(checkingInput.textContent)
   var result;
-  if(withdrawChecking==true) {
-    if(spanCheckingValue >= checkingValue) {
-      result = spanCheckingValue - checkingValue;
-    }else {
-      alert("ARE YOU KIDDING? YOU HAVE NO MONEY!")
-      return
-    }
+
+  if(withdrawChecking) {
+        if(spanCheckingValue >= checkingValue) {
+          result = spanCheckingValue - checkingValue;
+        }else {
+          alert("YOU HAVE NO MONEY!")
+          return
+        }
   }else{
     result = checkingValue + spanCheckingValue;
   }
 
-  checkingSpan.textContent = result;
+  checkingInput.textContent = result;
 }
 
 depositChecking.addEventListener('click', checkAccount);

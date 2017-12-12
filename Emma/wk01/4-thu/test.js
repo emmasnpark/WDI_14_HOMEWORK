@@ -1,15 +1,41 @@
-// The Alamein line has the following stops: Flinders Street, Richmond, East Richmond, Burnley, Hawthorn, and Glenferrie.
-//
-// The Glen Waverly line has the following stops: Flagstaff, Melbourne Central, Parliament, Richmond, Kooyong and Tooronga.
-//
-// The Sandringham line has the following stops: Southern Cross, Richmond, South Yarra, Prahran, and Windsor.
-//var melTransport = ['alamein', 'glenWaverlyn', 'sandringham'];
-var alamein = ['flinders street', 'richmond','east richmond','burnley','hawthorn','glenferrie'];
-var glenWaverlyn = ['flag staff', 'melbourne central', 'parliment', 'richmond', 'kooyong and tooronga'];
-var sandringham = ['southern cross', 'richmond', 'south yarra', 'prahran', 'windsor'];
+
+const alamein = ['flinders street', 'richmond','east richmond','burnley','hawthorn','glenferrie']
+const glenWaverlyn = ['flag staff', 'melbourne central', 'parliment', 'richmond', 'kooyong and tooronga']
+const sandringham = ['southern cross', 'richmond', 'south yarra', 'prahran', 'windsor']
+
+
 var a = [];
 var b = [];
 var c = [];
+
+var begin = prompt("begin?");
+var stop = prompt("stop?");
+
+function sameLine(begin,stop) {
+    if(alamein.includes(begin) && alamein.includes(stop)) {
+           if(alamein.indexOf(begin) < ) {
+
+           }else {
+
+           }
+    }else if (glenWaverlyn.includes(begin) && glenWaverlyn.includes(stop)) {
+
+    }else if (sandringham.includes(begin) && sandringham.includes(stop)) {
+
+    }else {
+      return
+    }
+}
+
+
+
+
+
+
+
+
+
+
 function publicTransport(origin, destination) {
   if(alamein.includes(origin)) {
         if(alamein.includes(destination)) {
@@ -177,7 +203,7 @@ function publicTransport(origin, destination) {
 //publicTransport('flinders street','kooyong and tooronga');
 //publicTransport('flinders street','windsor');
 //publicTransport('windsor','flinders street');
-//publicTransport('flinders street','southern cross');
+cosnsole.log(publicTransport('flinders street','southern cross'));
 //publicTransport('flag staff','parliment');
 //publicTransport('glenferrie','kooyong and tooronga');
 //publicTransport('burnley','southern cross');
