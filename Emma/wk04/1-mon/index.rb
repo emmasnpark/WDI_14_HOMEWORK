@@ -33,8 +33,4 @@ new_days_of_the_week[1] = weekends
 
 #number 4
 new_days_of_the_week.delete_at 1
-# print new_days_of_the_week.flatten.sort
-
-arr = [1,2,3,[4,[5,6],7],[8,9]]
-newarr = arr.flatten(1)
-print newarr
+print new_days_of_the_week.flatten.sort
