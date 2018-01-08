@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/stylesheets/movie.css">
+
+<div class="head">
+  <h1 class="title"><%= @answer["Title"]%></h1>
+</div>
+
+<div class="main">
+  <div class="poster">
+    <img src="<%= @answer["Poster"] %>" alt="">
+  </div>
+  <div class="detail">
+    <h3>Year: <span><%= @answer["Year"]%></span></p>
+    <p>Released: <span><%= @answer["Released"]%></span></p>
+    <p>Runtime: <span><%= @answer["Runtime"]%></span></p>
+    <p>Genre: <span><%= @answer["Genre"]%></span></p>
+    <p>Director: <span><%= @answer["Director"]%></span></p>
+    <p>Awards: <span><%= @answer["Awards"]%></span></p>
+    <p>Ratings: </p>
+    <p><span><%= @answer["Ratings"][0]["Source"] %> : <%= @answer["Ratings"][0]["Value"] %></span></p>
+    <p><span><%= @answer["Ratings"][1]["Source"] %> : <%= @answer["Ratings"][1]["Value"] %></span></p>
+    <button class="goback" type="button" name="button">Go back</button>
+  </div>
+
+</div>
+
+<div class="plot">
+  <p>Plot: <span><%= @answer["Plot"]%></p>
+</div>
