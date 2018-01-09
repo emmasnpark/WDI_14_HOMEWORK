@@ -1,0 +1,48 @@
+body {
+  color: gray;
+  box-sizing: border-box;
+  margin: 0 50px;
+   border: 1px solid black;
+}
+
+.head {
+  text-align: center;
+  font-size: 25px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  margin: 30px;
+  /* border: 1px solid black; */
+}
+
+.poster, .detail {
+    /* border: 1px solid black; */
+}
+
+.poster {
+  text-align: center;
+}
+
+.detail {
+  font-size: 18px;
+}
+
+.plot {
+  border: 1px solid black;
+  margin : 0 50px;
+  padding: 0 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+span {
+  color: #bf7144;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+}

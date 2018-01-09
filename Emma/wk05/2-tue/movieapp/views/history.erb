@@ -1,0 +1,6 @@
+<h1>History</h1>
+
+<a href="/">Go Back</a>
+<% @list.each do |name| %>
+<a href="/show?title=<%= name %>"><p><%= name %></p></a>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>hello</h1>
+
+<ul>
+  <% @answer.each do |list| %>
+    <a href="/show?title=<%= list["Title"]%>"><li><%= list["Title"] %></li><a>
+  <% end %>
+</ul>
