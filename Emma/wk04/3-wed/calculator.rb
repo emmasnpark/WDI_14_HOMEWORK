@@ -48,6 +48,3 @@ def multi_calculation
   # p new_arr.inject(r)
 end
 multi_calculation
-
-r = :+
-p [2,3,3].inject(r)
