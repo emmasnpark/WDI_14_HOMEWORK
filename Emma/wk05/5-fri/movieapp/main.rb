@@ -30,22 +30,25 @@ get '/show' do
   conn = PG.connect(dbname: 'movie')
   sql = "SELECT * FROM movies WHERE title = '#{params["title"]}';"
   db_result = conn.exec(sql)
+  # binding.pry
 
 
   if db_result.count == 0
   result = HTTParty.get("http://omdbapi.com/?apikey=2f6435d9&t=#{params["title"]}")
   @movie = result.parsed_response #parsed_response is a HTTParty method. it returns a data to hash
-  sql = "INSERT INTO movies (title, year, released, runtime, genre, director, awards, plot)
-         VALUES ('#{@movie["Title"]}', '#{@movie["Year"]}', '#{@movie["Released"]}','#{@movie["Runtime"]}', '#{@movie["Genre"]}',
-         '#{@movie["Director"]}', '#{@movie["Awards"]}', '#{@movie["Plot"]}');"
+  sql = "INSERT INTO movies (title, poster, year, released, runtime, genre, director, awards, plot)
+         VALUES ('#{@movie["Title"]}', '#{@movie["Poster"]}', '#{@movie["Year"]}', '#{@movie["Released"]}','#{@movie["Runtime"]}', '#{@movie["Genre"]}',
+         '#{@movie["Director"]}', '#{@movie["Awards"]}', '#{@movie["Plot"].gsub("'","''")}');"
+
 
           #return sql
   @movie_one = conn.exec(sql)
+  erb :show
   else
     @movie = db_result[0]
+    # binding.pry
+    erb :show_from_my_server
   end
-
-  erb :show
 end
 
 get '/history' do

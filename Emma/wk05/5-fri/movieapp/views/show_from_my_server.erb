@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/stylesheets/movie.css">
+
+<div class="head">
+  <h1 class="title">Title : <%= @movie["title"]%></h1>
+</div>
+
+<div class="main">
+  <div class="poster">
+    <img src="<%= @movie["poster"] %>" alt="">
+  </div>
+  <div class="detail">
+    <h3>Year: <span><%= @movie["year"]%></span></p>
+    <p>Released: <span><%= @movie["released"]%></span></p>
+    <p>Runtime: <span><%= @movie["runtime"]%></span></p>
+    <p>Genre: <span><%= @movie["genre"]%></span></p>
+    <p>Director: <span><%= @movie["director"]%></span></p>
+    <p>Awards: <span><%= @movie["awards"]%></span></p>
+    <!-- <p>Ratings: </p>
+    <p><span><#%= @movie["Ratings"][0]["Source"] %> : <#%= @movie["Ratings"][0]["Value"] %></span></p>
+    <p><span><#%= @movie["Ratings"][1]["Source"] %> : <#%= @movie["Ratings"][1]["Value"] %></span></p> -->
+    <a href="/">Go Back</a>
+  </div>
+
+</div>
+
+<div class="plot">
+  <p>Plot: <span><%= @movie["plot"]%></p>
+</div>

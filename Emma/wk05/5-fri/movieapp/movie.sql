@@ -1,8 +1,9 @@
 CREATE DATABASE movie;
 
-CREATE TABLE moviess (
+CREATE TABLE movies (
   id SERIAL PRIMARY KEY,
   title VARCHAR(300),
+  poster VARCHAR(800),
   year VARCHAR(300),
   released VARCHAR(400),
   runtime VARCHAR(300),
@@ -12,5 +13,4 @@ CREATE TABLE moviess (
   plot VARCHAR(800)
 );
 
-INSERT INTO dishes (name, img_url) VALUES ('pudding',
-  'http://housebeautiful.cdnds.net/15/51/1450289315-image0032.png');
+INSERT INTO movies (plot) VALUES ('can''t');
