@@ -1,0 +1,20 @@
+<h1>Project Show page</h1>
+<a href="/">Go back home</a>
+<h1>id : <%= @project.id %></h1>
+<h1>title : <%= @project.title %></h1>
+
+<img class="bla" src="<%= @project.preview.url%>" alt=""> 
+
+<h1>Comments</h1>
+<form action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="project_id" value="<%= @project.id %>">
+  <textarea name="body" rows="20" cols="80"></textarea>
+  <button>Comment</button>
+</form>
+<hr>
+<% @comments.each do |comment| %>
+<h2><%= comment.user_id %></h2>
+<h1><%= comment.body %></h1>
+<hr>
+<% end %>

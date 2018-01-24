@@ -1,0 +1,12 @@
+<a href="/projects/new"><h1>Create A New Project</h1></a>
+<div class="container">
+  <% @projects.each do |project| %>
+    <div class="project">
+      <a href="projects/<%= project.id%>">
+        <h1>title : <%= project.title %></h1>
+        <h1>user_id: <%= project.user_id %></h1>
+        <img src="<%= project.preview.url %>" alt="">
+      </a>
+    </div>
+  <% end %>
+</div>
