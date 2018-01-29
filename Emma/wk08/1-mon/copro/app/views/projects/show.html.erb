@@ -1,0 +1,50 @@
+<h1>Project Show page</h1>
+<a href="/">Go back home</a>
+<h1>id : <%= @project.id %></h1>
+<h1>title : <%= @project.title %></h1>
+
+<div class="wrapper">
+<img src="<%= @project.preview.url%>" alt="">
+<span class="star">&#10086;</span>
+</div>
+
+<form action="/likes" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="project_id" value="<%= @project.id %>">
+  <p class="count"><%= @project.likes.count %></p>
+  <button>Like</button>
+</form>
+
+<h1>Comments</h1>
+<form action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="project_id" value="<%= @project.id %>">
+  <textarea name="body" rows="20" cols="80"></textarea>
+  <button>Comment</button>
+</form>
+<hr>
+<% @comments.each do |comment| %>
+<h2><%= comment.user_id %></h2>
+<h1><%= comment.body %></h1>
+ <% if session[:user_id] == comment.user_id %>
+   <form action="/comments/<%= comment.id %>" method="post">
+     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+     <input type="hidden" name="_method" value="delete">
+     <input type="hidden" name="comment_id" value="<%= comment.id %>">
+     <input type="hidden" name="_method" value="delete">
+     <button>Delete</button>
+   </form>
+ <% end %>
+<hr>
+<% end %>
+
+<script>
+
+   document.querySelector('.wrapper span').addEventListener("click", function() {
+     var countNumber = document.querySelector('.count').textContent
+     countNumber = Number(countNumber) + 1
+     document.querySelector('.count').innerHTML = countNumber
+     console.log("lkes it");
+     console.log(countNumber)
+  })
+</script>
