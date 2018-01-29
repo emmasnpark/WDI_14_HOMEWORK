@@ -1,0 +1,11 @@
+<% @dishes.each do |dish| %>
+<a href="/dishes/<%= dish.id %>">
+  <h1>ID: <%= dish.id %></h1>
+  <h1>TITLE: <%= dish.name %></h1>
+  <img src="<%= dish.image_url%>" alt="">
+</a>
+<% end %>
+
+<form action="dishes/new">
+  <button>NEW</button>
+</form>

@@ -13,6 +13,5 @@
 
  *= require reset
  *= require main
- *= require comments
  *= require_self
  */

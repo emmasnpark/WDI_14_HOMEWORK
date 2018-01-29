@@ -22,9 +22,4 @@ var navigateToValue = function() {
   console.log(this.value);
 }
 
-//Send analytics data
-// var sendAnalytics = function() {
-//   alert("hi")
-// }
 navigationSelect.addEventListener('change',  navigateToValue);
-//navigationSelect.addEventListener('change',  sendAnalytics);

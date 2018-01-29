@@ -8,10 +8,16 @@ class CommentsController < ApplicationController
     @comment.user_id = session[:user_id]
     @comment.project_id = params[:project_id]
      if @comment.save
-      redirect_to "/projects/#{params[:project_id]}"
+      redirect_to "/projects/#{@comment.project_id}"
      else
       render 'pages/home'
      end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:comment_id])
+    @comment.destroy
+    redirect_to "/projects/#{@comment.project_id}"
   end
 
 

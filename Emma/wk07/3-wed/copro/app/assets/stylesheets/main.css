@@ -9,10 +9,32 @@ label, input {
 
 .project {
   width: 50%;
+  background-color: mistyrose
+}
+
+.project h2 {
+  display: none;
 }
 
 .project img {
   display: block /* space under image */
+}
+
+.wrapper img{
+  width: 300px;
+}
+
+.wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.wrapper span{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2em;
+  color: red;
 }
 
 @media (min-width: 400px) {
@@ -25,9 +47,12 @@ label, input {
   .project {
     width: 25%;
   }
+  .project h2 {
+    display: block;
+  }
 }
-
+/*
 .bla {
   width: 300px;
   height: 300px;
-}
+} */
