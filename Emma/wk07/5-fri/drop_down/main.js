@@ -1,4 +1,4 @@
-console.log("hi");
+
 var myobject = {
     nyc : 'NYC',
     sf : 'SF',
@@ -12,8 +12,6 @@ for(property in myobject) {
     select.options[select.options.length] = new Option(myobject[property], property);
 }
 
-var navigationSelect = document.getElementById("city-type");
-
 //Navigate to URL when select box is changed
 var navigateToValue = function() {
   var element = document.querySelector("body")
@@ -22,4 +20,4 @@ var navigateToValue = function() {
   console.log(this.value);
 }
 
-navigationSelect.addEventListener('change',  navigateToValue);
+select.addEventListener('change',  navigateToValue);
