@@ -1,0 +1,12 @@
+<h1>Give A New Nickname</h1>
+<form action="/pokemons/#{params[:id]}" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="put">
+  <label for="">Species</label>
+  <input type="text" name="species" value="<%=@pokemon.species %>">
+  <label for="">Nickname</label>
+  <input type="text" name="nickname" value="<%=@pokemon.nickname %>">
+  <label for="">Level</label>
+  <input type="text" name="level" value="<%=@pokemon.level %>">
+  <button>Create</button>
+</form>
