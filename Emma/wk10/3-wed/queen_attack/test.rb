@@ -16,7 +16,7 @@ class QueensTest < MiniTest::Unit::TestCase
   end
 
   def test_cannot_occupy_same_space
-    skip
+
     assert_raises ArgumentError do
       Queens.new(white: [2, 4], black: [2, 4])
     end
